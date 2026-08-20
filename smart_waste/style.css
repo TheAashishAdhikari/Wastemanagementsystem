@@ -1,0 +1,354 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: #f4f7f5;
+  color: #1f2933;
+  font-family: Arial, sans-serif;
+}
+
+header {
+  padding: 16px 5%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #145c42;
+  color: white;
+}
+
+.logo {
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+nav {
+  display: flex;
+  gap: 15px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+}
+
+.container {
+  width: 92%;
+  max-width: 1300px;
+  min-height: 80vh;
+  margin: 30px auto;
+}
+
+.login-box,
+.form-box {
+  max-width: 700px;
+  margin: 50px auto;
+  padding: 25px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 5px 18px rgba(0, 0, 0, 0.08);
+}
+
+.card {
+  margin-bottom: 20px;
+  padding: 22px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 5px 18px rgba(0, 0, 0, 0.06);
+}
+
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+}
+
+.statistics {
+  margin: 20px 0;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+}
+
+.stat-card {
+  padding: 20px;
+  background: white;
+  border-left: 5px solid #21875f;
+  border-radius: 8px;
+}
+
+.stat-card strong {
+  color: #145c42;
+  font-size: 30px;
+}
+
+.page-heading,
+.section-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+}
+
+label {
+  display: block;
+  margin-top: 12px;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+input,
+select,
+textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #cbd5cf;
+  border-radius: 6px;
+}
+
+textarea {
+  min-height: 90px;
+}
+
+button,
+.button {
+  display: inline-block;
+  margin-top: 14px;
+  padding: 10px 16px;
+  border: none;
+  border-radius: 6px;
+  background: #21875f;
+  color: white;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+button:hover,
+.button:hover {
+  background: #145c42;
+}
+
+.checkbox {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.checkbox input {
+  width: auto;
+}
+
+.message {
+  margin-bottom: 20px;
+  padding: 12px;
+  border-left: 5px solid #21875f;
+  background: #dff5e9;
+}
+
+.table-container {
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  padding: 12px;
+  border-bottom: 1px solid #e2e8e5;
+  text-align: left;
+  vertical-align: top;
+}
+
+th {
+  background: #eef5f1;
+}
+
+.status {
+  padding: 5px 9px;
+  border-radius: 20px;
+  background: #dff5e9;
+  color: #145c42;
+  font-size: 13px;
+  font-weight: bold;
+}
+
+.small-image {
+  width: 70px;
+  height: 55px;
+  border-radius: 6px;
+  object-fit: cover;
+}
+
+.admin-report {
+  margin-bottom: 20px;
+  padding: 18px;
+  border: 1px solid #dde6e1;
+  border-radius: 8px;
+}
+
+footer {
+  padding: 20px;
+  background: #145c42;
+  color: white;
+  text-align: center;
+}
+
+@media screen and (max-width: 800px) {
+  .dashboard-grid,
+  .form-grid,
+  .statistics {
+    grid-template-columns: 1fr;
+  }
+
+  header,
+  .page-heading {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}
+
+/* Your existing desktop CSS */
+footer {
+    padding: 20px;
+    background: #145c42;
+    color: white;
+    text-align: center;
+}
+
+/* PASTE BOTTLE CSS HERE */
+
+.waste-visual-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 80px;
+    margin: 70px 0;
+    padding: 70px;
+    background: white;
+    border-radius: 16px;
+}
+
+.bottle-container {
+    width: 270px;
+    margin: auto;
+}
+
+.bottle-cap {
+    width: 90px;
+    height: 35px;
+    margin: auto;
+    border: 7px solid #145c42;
+    border-radius: 8px 8px 3px 3px;
+}
+
+.bottle-neck {
+    width: 75px;
+    height: 55px;
+    margin: auto;
+    border-left: 7px solid #145c42;
+    border-right: 7px solid #145c42;
+}
+
+.bottle-body {
+    position: relative;
+    width: 270px;
+    height: 470px;
+    overflow: hidden;
+    border: 7px solid #145c42;
+    border-radius: 75px 75px 90px 90px;
+    background: white;
+}
+
+#wasteParticles {
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+}
+
+.waste-particle {
+    position: absolute;
+    display: block;
+    border: 2px solid currentColor;
+    border-radius: 70% 0 70% 0;
+    animation: moveParticle var(--duration) ease-in-out infinite;
+    animation-delay: var(--delay);
+}
+
+    .waste-particle::after {
+        content: "";
+        position: absolute;
+        width: 7px;
+        height: 2px;
+        top: 70%;
+        left: 65%;
+        background: currentColor;
+        transform: rotate(45deg);
+    }
+
+.green-particle {
+    color: #21875f;
+}
+
+.red-particle {
+    color: #ef5b68;
+}
+
+@keyframes moveParticle {
+    0%, 100% {
+        transform: translate(0, 0) rotate(0deg);
+    }
+
+    50% {
+        transform: translate(var(--move-x), calc(var(--move-y) * -1)) rotate(20deg);
+    }
+}
+
+.waste-visual-section {
+    position: relative;
+    min-height: 110vh;
+    align-items: start;
+}
+
+.bottle-container {
+    position: sticky;
+    top: 120px;
+    align-self: start;
+    will-change: transform;
+}
+
+/* Your mobile CSS comes after everything above */
+
+@media screen and (max-width: 800px) {
+    .waste-visual-section {
+        min-height: auto;
+    }
+
+    .bottle-container {
+        position: relative;
+        top: auto;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .dashboard-grid,
+    .form-grid,
+    .statistics {
+        grid-template-columns: 1fr;
+    }
+
+    .waste-visual-section {
+        grid-template-columns: 1fr;
+    }
+}
